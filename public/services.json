@@ -1,0 +1,20 @@
+[
+  {
+    "id": 101,
+    "img": "https://i.ibb.co/pRtFVZZ/whitening.png",
+    "title": "Fluoride Treatment",
+    "text": "Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the"
+  },
+  {
+    "id": 102,
+    "img": "https://i.ibb.co/qDgqT3X/cavity.png",
+    "title": "Cavity Filling",
+    "text": "Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the"
+  },
+  {
+    "id": 103,
+    "img": "https://i.ibb.co/L91FJZP/fluoride.png",
+    "title": "Teeth Whitening",
+    "text": "Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the"
+  }
+]
