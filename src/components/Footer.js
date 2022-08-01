@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto mt-10">
       <footer className="footer p-10 bg-base-100 text-base-content">
         <div>
           <span className="footer-title">Services</span>

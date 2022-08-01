@@ -7,10 +7,12 @@ const NotFound = () => {
       <div className="text-center">
         <h2 className="text-8xl font-bold text-error">404</h2>
         <h3 className="lg:text-5xl text-3xl font-bold">OOPS!PAGE NOT FOUND</h3>
-        <p className="text-xl mb-3">Sorry, the page are you looking for it's not exist.</p>
-        <button className="btn btn-primary text-white">
-          <Link to={"/"}>RETURN HOME</Link>
-        </button>
+        <p className="text-xl mb-3">
+          Sorry, the page are you looking for it's not exist.
+        </p>
+        <Link className="btn btn-primary text-white" to={"/"}>
+          RETURN HOME
+        </Link>
       </div>
     </div>
   );
