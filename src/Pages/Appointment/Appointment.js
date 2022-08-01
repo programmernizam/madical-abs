@@ -1,4 +1,3 @@
-import { format } from "date-fns";
 import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import AppointmentHero from "./AppointmentHero";
@@ -9,7 +8,7 @@ const Appointment = () => {
   return (
     <div>
       <AppointmentHero date={date} setDate={setDate} />
-      <AvailableAppointment date={format(date, "PP")} />
+      <AvailableAppointment date={date} />
       <Footer />
     </div>
   );
