@@ -1,13 +1,24 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
+import auth from "../firebase.init";
+import Loading from "./Loading";
 
 const Navbar = ({ children }) => {
+  const [user, loading] = useAuthState(auth);
+  if (loading) {
+    return <Loading />;
+  }
+  const logOut = () => {
+    signOut(auth);
+  };
   const navItem = (
     <>
       <li>
         <NavLink
           to={"/"}
-          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white "
+          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white justify-center"
         >
           Home
         </NavLink>
@@ -15,7 +26,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/about"}
-          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white "
+          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white justify-center"
         >
           About
         </NavLink>
@@ -23,7 +34,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/appointment"}
-          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white "
+          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white justify-center"
         >
           Appointment
         </NavLink>
@@ -31,7 +42,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/reviews"}
-          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white "
+          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white justify-center"
         >
           Reviews
         </NavLink>
@@ -39,18 +50,27 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/contact"}
-          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white "
+          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white justify-center"
         >
           Contact Us
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to={"/login"}
-          className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white "
-        >
-          Login
-        </NavLink>
+        {user ? (
+          <button
+            onClick={logOut}
+            className="btn btn-ghost hover:bg-neutral hover:text-white rounded"
+          >
+            Sign Out
+          </button>
+        ) : (
+          <NavLink
+            to={"/login"}
+            className="rounded bg-base-100 hover:bg-neutral px-6 hover:text-white justify-center"
+          >
+            Login
+          </NavLink>
+        )}
       </li>
     </>
   );
