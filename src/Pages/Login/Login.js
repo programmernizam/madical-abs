@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "./GoogleLogin";
 import { useForm } from "react-hook-form";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Loading from "../../components/Loading";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
   const {
     register,
     formState: { errors },
@@ -14,6 +18,8 @@ const Login = () => {
   } = useForm();
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, forgotError] =
+    useSendPasswordResetEmail(auth);
   const navigate = useNavigate();
   const location = useLocation();
   let singInError;
@@ -23,11 +29,13 @@ const Login = () => {
       navigate(from, { replace: true });
     }
   }, [user, from, navigate]);
-  if (loading) {
+  if (loading || sending) {
     return <Loading />;
   }
-  if (error) {
-    singInError = <p className="text-error">{error?.message}</p>;
+  if (error || forgotError) {
+    singInError = (
+      <p className="text-error">{error?.message || forgotError?.message}</p>
+    );
   }
   const onSubmit = (data) => {
     signInWithEmailAndPassword(data.email, data.password);
@@ -65,9 +73,12 @@ const Login = () => {
               </p>
               {/* Reset Password */}
               <label className="label">
-                <a href="#reset" className="label-text-alt link link-hover">
+                <label
+                  htmlFor="forgot-password"
+                  className=" link link-hover modal-button"
+                >
                   Forgot password?
-                </a>
+                </label>
               </label>
             </div>
             {singInError}
@@ -77,13 +88,42 @@ const Login = () => {
             </div>
             <p>
               New to Doctor Portal?{" "}
-              <Link to={"/signup"} className="text-[#19D3AE]">
+              <Link to="/signup" className="text-[#19D3AE]">
                 Create Account
               </Link>
             </p>
             <div className="divider">OR</div>
           </form>
           <GoogleLogin />
+        </div>
+      </div>
+      <div>
+        <input type="checkbox" id="forgot-password" className="modal-toggle" />
+        <div className="modal modal-middle sm:modal-middle">
+          <div className="modal-box text-center">
+            <label
+              htmlFor="forgot-password"
+              className="btn btn-sm btn-circle absolute right-2 top-2"
+            >
+              ✕
+            </label>
+            <h3 className="text-2xl font-bold my-5">Forgot Password</h3>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              placeholder="Email Address"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <input
+              type="submit"
+              className="btn w-full max-w-xs my-5"
+              onClick={async () => {
+                await sendPasswordResetEmail(email);
+                alert("Sent email");
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>

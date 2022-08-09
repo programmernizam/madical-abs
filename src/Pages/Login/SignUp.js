@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import auth from "../../firebase.init";
 import {
   useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import Loading from "../../components/Loading";
@@ -18,25 +19,32 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [sendEmailVerification, sending, verifyError] =
+    useSendEmailVerification(auth);
   let signUpError;
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
   useEffect(() => {
-    navigate(from, { replace: true });
+    if (user) {
+      navigate(from, { replace: true });
+    }
   }, [user, from, navigate]);
-  if (error || updateError) {
+  if (error || updateError || verifyError) {
     signUpError = (
-      <p className="text-error">{error?.message || updateError?.updateError}</p>
+      <p className="text-error">
+        {error?.message || updateError?.updateError || verifyError}
+      </p>
     );
   }
-  if (loading || updating) {
+  if (loading || updating || sending) {
     return <Loading />;
   }
 
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
+    await sendEmailVerification(data.email);
   };
   return (
     <section className="h-screen grid grid-cols-1 justify-items-center content-center">
