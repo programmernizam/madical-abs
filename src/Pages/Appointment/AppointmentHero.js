@@ -5,7 +5,7 @@ import chair from "../../assets/images/chair.png";
 const AppointmentHero = ({ date, setDate }) => {
   return (
     <section>
-      <div className="hero min-h-screen bg-base-100">
+      <div className="hero lg:min-h-screen bg-base-100">
         <div className="hero-content flex-col lg:flex-row-reverse gap-20">
           <img src={chair} className="lg:max-w-2xl rounded-lg shadow-2xl" alt="" />
           <div className="shadow-2xl rounded-lg">

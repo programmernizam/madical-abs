@@ -23,7 +23,7 @@ const Contact = () => {
             className="input w-full max-w-xl"
           />
           <textarea
-            className="textarea w-full max-w-xl"
+            className="textarea w-full max-w-xl h-36"
             placeholder="Your Message"
           ></textarea>
           <div>

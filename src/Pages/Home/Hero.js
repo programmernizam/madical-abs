@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="container mx-auto">
       {/* Hero Top */}
-      <div className="hero min-h-screen bg-base-100">
+      <div className="hero lg:min-h-screen bg-base-100">
         <div className="hero-content flex-col lg:flex-row-reverse gap-10">
           <img src={chair} className="lg:max-w-xl rounded-lg shadow-2xl" alt="" />
           <div>
@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Hero-bottom */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-5 lg:p-0">
         <InfoCard
           cardTitle={"Opening Hours"}
           cardImg={clock}
