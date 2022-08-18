@@ -20,9 +20,11 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-9">
-        {testimonials.map((testimonial) => (
-          <Testimonial key={testimonial.id} testimonial={testimonial} />
-        ))}
+        {testimonials
+          .map((testimonial) => (
+            <Testimonial key={testimonial._id} testimonial={testimonial} />
+          ))
+          .slice(0, 3)}
       </div>
     </section>
   );
