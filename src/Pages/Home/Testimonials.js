@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import quote from "../../assets/icons/quote.svg";
-import Testimonial from "./Testimonial";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Autoplay, Pagination } from "swiper";
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   useEffect(() => {
@@ -19,12 +26,58 @@ const Testimonials = () => {
           <img src={quote} alt="" className="w-40" />
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-9">
-        {testimonials
-          .map((testimonial) => (
-            <Testimonial key={testimonial._id} testimonial={testimonial} />
-          ))
-          .slice(0, 3)}
+      <div className="mt-10">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+          modules={[Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          <div>
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial._id} className="py-10 px-2">
+                <div className="p-10 shadow-xl rounded-2xl h-72 bg-base-100">
+                  <div className="flex justify-start mb-5 gap-8 items-center">
+                    {testimonial?.img ? (
+                      <div className="avatar">
+                        <div className="w-20 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
+                          <img src={testimonial.img} alt="" />
+                        </div>
+                      </div>
+                    ) : (
+                      <div class="avatar placeholder">
+                        <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
+                          <span class="text-xl">A</span>
+                        </div>
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="text-xl font-semibold">
+                        {testimonial.name}
+                      </h3>
+                      <h5>{testimonial.city}</h5>
+                    </div>
+                  </div>
+                  <p>{testimonial.text.slice(0, 200)}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </div>
+        </Swiper>
       </div>
     </section>
   );

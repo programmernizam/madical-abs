@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const MyReview = () => {
   const [reviews, setReviews] = useState([]);
@@ -9,6 +10,16 @@ const MyReview = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
+  const handleDelete = (id) => {
+    fetch(`http://localhost:4200/reviews/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        toast.success("Successfully Delete Review");
+        window.location.reload();
+      });
+  };
   return (
     <div>
       <div className="overflow-x-auto">
@@ -21,7 +32,6 @@ const MyReview = () => {
               <th>City</th>
               <th>text</th>
               <th>img</th>
-              <th>Update</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -34,10 +44,12 @@ const MyReview = () => {
                 <td>{review.text?.slice(0, 40)}</td>
                 <td>{review.img?.slice(0, 40)}</td>
                 <td>
-                  <button className="btn btn-accent">Update</button>
-                </td>
-                <td>
-                  <button className="btn btn-error">X</button>
+                  <button
+                    onClick={() => handleDelete(review._id)}
+                    className="btn btn-error"
+                  >
+                    X
+                  </button>
                 </td>
               </tr>
             ))}

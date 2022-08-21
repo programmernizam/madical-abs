@@ -5,9 +5,9 @@ import chair from "../../assets/images/chair.png";
 const AppointmentHero = ({ date, setDate }) => {
   return (
     <section>
-      <div className="hero lg:min-h-screen bg-base-100">
-        <div className="hero-content flex-col lg:flex-row-reverse gap-20">
-          <img src={chair} className="lg:max-w-2xl rounded-lg shadow-2xl" alt="" />
+      <div className="hero lg:min-h-[80vh] bg-base-200">
+        <div className="hero-content flex-col lg:flex-row-reverse gap-20 h-full lg:p-0">
+          <img src={chair} className="rounded-lg h-full" alt="" />
           <div className="shadow-2xl rounded-lg">
             <DayPicker
               mode="single"

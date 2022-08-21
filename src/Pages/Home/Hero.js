@@ -1,52 +1,37 @@
 import React from "react";
 import chair from "../../assets/images/chair.png";
-import clock from "../../assets/icons/clock.svg";
-import marker from "../../assets/icons/marker.svg";
-import phone from "../../assets/icons/phone.svg";
-import InfoCard from "./InfoCard";
-
 const Hero = () => {
   return (
-    <section className="container mx-auto">
+    <section className="bg-base-200">
       {/* Hero Top */}
-      <div className="hero lg:min-h-screen bg-base-100">
-        <div className="hero-content flex-col lg:flex-row-reverse gap-10">
-          <img src={chair} className="lg:max-w-xl rounded-lg shadow-2xl" alt="" />
-          <div>
-            <h1 className="lg:text-6xl text-5xl font-bold">
-              Your New Smile Starts Here
-            </h1>
-            <p className="py-6">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the
-            </p>
-            <button className="btn border-0 bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC] text-white">
-              Get Started
-            </button>
+      <div className="container mx-auto">
+        <div className="hero lg:min-h-[80vh]">
+          <div className="hero-content flex-col lg:flex-row-reverse gap-x-10 lg:p-0 lg:h-full">
+            <img
+              src={chair}
+              className="lg:flex lg:items-end p-0 rounded-lg h-full"
+              alt=""
+            />
+            <div className="lg:pl-2">
+              <h4 className="text-[#8D5CF6] font-bold">For Better Future</h4>
+              <h1 className="lg:text-6xl text-4xl font-bold lg:my-8 lg:leading-[80px]">
+                Meet the Best Hospital
+              </h1>
+              <p className="py-6 text-[#737373] text-xl">
+                DentalCare is most focused in helping you discover <br /> your
+                most beautiful smile
+              </p>
+              <div className="">
+                <button className="btn border-0 bg-gradient-to-r from-[#8D5CF6] to-[#5cacf6] text-white rounded-none">
+                  Get Quote Now
+                </button>
+                <button className="btn border-0 ml-5 bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC] text-white rounded-none">
+                  Get Started
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      {/* Hero-bottom */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-5 lg:p-0">
-        <InfoCard
-          cardTitle={"Opening Hours"}
-          cardImg={clock}
-          cardBg="bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC]"
-          cardText={"Lorem Ipsum is simply dummy text of the pri"}
-        ></InfoCard>
-        <InfoCard
-          cardTitle={"Visit our location"}
-          cardImg={marker}
-          cardBg="bg-[#3A4256]"
-          cardText={"Brooklyn, NY 10036, United States"}
-        ></InfoCard>
-        <InfoCard
-          cardTitle={"Contact us now"}
-          cardImg={phone}
-          cardBg="bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC]"
-          cardText={"+000 123 456789"}
-        ></InfoCard>
       </div>
     </section>
   );

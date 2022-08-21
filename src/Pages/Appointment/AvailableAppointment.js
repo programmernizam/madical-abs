@@ -29,7 +29,7 @@ const AvailableAppointment = ({ date }) => {
   //     .then((data) => setServices(data));
   // }, []);
   return (
-    <section className="container mx-auto text-center">
+    <section className="container mx-auto text-center py-20">
       <h2 className="text-2xl text-[#19D3AE]">
         Available Services on {format(date, "PP")}
       </h2>
