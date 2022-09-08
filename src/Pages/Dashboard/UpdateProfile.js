@@ -6,11 +6,7 @@ import Loading from "../../components/Loading";
 import auth from "../../firebase.init";
 
 const UpdateProfile = () => {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const [updateProfile, updating, error] = useUpdateProfile(auth);
   let updateError;
   if (updating) {
@@ -24,7 +20,7 @@ const UpdateProfile = () => {
     toast("Profile Successfully Update");
   };
   return (
-    <div>
+    <div className="h-screen grid grid-cols-1 justify-items-center content-center">
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <div className="card-body">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -34,26 +30,13 @@ const UpdateProfile = () => {
               <label className="label">
                 <span className="label-text">Your Name</span>
               </label>
-              <input
-                className="input input-bordered"
-                {...register("name", { required: true })}
-              />
-              <p className="text-error">
-                {errors.name?.type === "required" && "name is required"}
-              </p>
+              <input className="input input-bordered" {...register("name")} />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Your Image</span>
               </label>
-              <input
-                className="input input-bordered"
-                // type="file"
-                {...register("img", { required: true })}
-              />
-              <p className="text-error">
-                {errors.name?.type === "required" && "name is required"}
-              </p>
+              <input className="input input-bordered" {...register("img")} />
             </div>
             {updateError}
             {/* Update Button */}

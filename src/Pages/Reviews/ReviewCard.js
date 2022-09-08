@@ -1,20 +1,29 @@
 import React from "react";
+import ReadMore from "../../components/ReadMore";
 
 const ReviewCard = ({ review }) => {
   const { name, city, img, text } = review;
   return (
-    <div className="p-10 shadow-xl rounded-2xl hover:border-2 border-2 hover:border-accent border-sky-500">
-      <p>{text}</p>
-      <div className="flex justify-start mt-5 gap-8 items-center">
-        <div className="avatar">
-          <div className="w-20 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
-            <img src={img} alt="" />
-          </div>
+    <div className="shadow bg-base-100 h-[350px]">
+      <div className="flex flex-col lg:flex-row gap-5 justify-center items-center min-h-[83%]">
+        <div className="flex-1">
+          {img ? (
+            <img src={img} alt="" className="w-full h-[291px] object-cover" />
+          ) : (
+            <img
+              className="w-full h-[292px] object-cover"
+              src="https://i.ibb.co/pJjLHNT/img-avatar.pngws"
+              alt=""
+            />
+          )}
         </div>
-        <div>
-          <h3 className="text-xl font-semibold">{name}</h3>
-          <h5>{city}</h5>
+        <div className="flex-1 p-2">
+          <ReadMore limit={200}>{text}</ReadMore>
         </div>
+      </div>
+      <div className="px-5 py-2 bg-gradient-to-r from-[#8D5CF6] to-[#5cacf6]">
+        <h3 className="text-2xl text-white">{name}</h3>
+        <h5 className="text-white">{city}</h5>
       </div>
     </div>
   );

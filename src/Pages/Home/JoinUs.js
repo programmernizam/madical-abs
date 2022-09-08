@@ -2,7 +2,7 @@ import React from "react";
 
 const JoinUs = () => {
   return (
-    <section className="bg-base-200 py-40">
+    <section className="bg-[#F6F7FB] py-40">
       <div className="container mx-auto px-3 lg:px-0">
         <div class="mb-20 text-center">
           <h4 className="font-bold text-[#8D5CF6]">Newsletter</h4>

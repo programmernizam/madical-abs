@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Appointment from "./Pages/Appointment/Appointment";
 import Reviews from "./Pages/Reviews/Reviews";
+import Contact from "./Pages/Contact/Contact";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/Login/SignUp";
 import NotFound from "./components/NotFound";
@@ -36,6 +37,7 @@ function App() {
           }
         />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/view-profile" element={<ViewProfile />} />

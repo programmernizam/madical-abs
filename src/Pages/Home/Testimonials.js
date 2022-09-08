@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import quote from "../../assets/icons/quote.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
+import quote from "../../assets/icons/quote.svg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper";
+import ReadMore from "../../components/ReadMore";
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   useEffect(() => {
@@ -50,7 +51,7 @@ const Testimonials = () => {
           <div>
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial._id} className="py-10 px-2">
-                <div className="p-10 shadow-xl rounded-2xl h-72 bg-base-100">
+                <div className="p-10 shadow-xl rounded-2xl bg-base-100 min-h-[300px]">
                   <div className="flex justify-start mb-5 gap-8 items-center">
                     {testimonial?.img ? (
                       <div className="avatar">
@@ -60,7 +61,7 @@ const Testimonials = () => {
                       </div>
                     ) : (
                       <div class="avatar placeholder">
-                        <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
+                        <div class="bg-neutral-focus ring ring-accent ring-offset-base-100 ring-offset-2 text-neutral-content rounded-full w-20">
                           <span class="text-xl">A</span>
                         </div>
                       </div>
@@ -72,7 +73,7 @@ const Testimonials = () => {
                       <h5>{testimonial.city}</h5>
                     </div>
                   </div>
-                  <p>{testimonial.text.slice(0, 200)}</p>
+                  <ReadMore limit={135}>{testimonial.text}</ReadMore>
                 </div>
               </SwiperSlide>
             ))}

@@ -13,7 +13,7 @@ const MyAppointment = () => {
   return (
     <div>
       <div class="overflow-x-auto">
-        <table class="table table-zebra w-full">
+        <table class="table table-zebra w-full border-2">
           {/* <!-- head --> */}
           <thead>
             <tr className="text-center">
@@ -29,7 +29,7 @@ const MyAppointment = () => {
           <tbody>
             {appointment.map((appoint, index) => (
               <tr className="text-center">
-                <td>{index+ 1}</td>
+                <td>{index + 1}</td>
                 <td>{appoint.patientName}</td>
                 <td>{appoint.patient}</td>
                 <td>{appoint.date}</td>

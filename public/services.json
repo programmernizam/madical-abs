@@ -1,20 +1,38 @@
 [
   {
     "id": 101,
-    "img": "https://i.ibb.co/pRtFVZZ/whitening.png",
-    "title": "Fluoride Treatment",
-    "text": "Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the"
+    "img": "https://i.ibb.co/tPT02j3/asset-9.png",
+    "title": "Teeth Cleaning",
+    "text": "Velit risus pede blandit conubia habitant letius porta in vehicula magnis porttitor"
   },
   {
     "id": 102,
-    "img": "https://i.ibb.co/qDgqT3X/cavity.png",
-    "title": "Cavity Filling",
-    "text": "Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the"
+    "img": "https://i.ibb.co/MpXxrZ0/asset-11.png",
+    "title": "Dental Fillings",
+    "text": "Velit risus pede blandit conubia habitant letius porta in vehicula magnis porttitor"
   },
   {
     "id": 103,
-    "img": "https://i.ibb.co/L91FJZP/fluoride.png",
-    "title": "Teeth Whitening",
-    "text": "Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the"
+    "img": "https://i.ibb.co/LSR1DSv/asset-13.png",
+    "title": "Teeth Braces",
+    "text": "Velit risus pede blandit conubia habitant letius porta in vehicula magnis porttitor"
+  },
+  {
+    "id": 104,
+    "img": "https://i.ibb.co/JQ5WLG8/asset-10.png",
+    "title": "Implants",
+    "text": "Velit risus pede blandit conubia habitant letius porta in vehicula magnis porttitor"
+  },
+  {
+    "id": 105,
+    "img": "https://i.ibb.co/sw6LK5K/asset-12.png",
+    "title": "Whitening",
+    "text": "Velit risus pede blandit conubia habitant letius porta in vehicula magnis porttitor"
+  },
+  {
+    "id": 106,
+    "img": "https://i.ibb.co/qDvpdxJ/asset-14.png",
+    "title": "Tooth Extraction",
+    "text": "Velit risus pede blandit conubia habitant letius porta in vehicula magnis porttitor"
   }
 ]

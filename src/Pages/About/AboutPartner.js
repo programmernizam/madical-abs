@@ -12,7 +12,7 @@ import partner3 from "../../assets/partners/fa-brands-3.png";
 import partner4 from "../../assets/partners/fa-brands-4.png";
 import partner5 from "../../assets/partners/fa-brands-5.png";
 
-const Partners = () => {
+const AboutPartner = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto">
@@ -47,4 +47,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default AboutPartner;
