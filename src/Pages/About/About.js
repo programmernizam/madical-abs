@@ -1,9 +1,10 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import AboutAward from "./AboutAward";
+import AboutCounter from "./AboutCounter";
 import AboutHero from "./AboutHero";
 import AboutPartner from "./AboutPartner";
-import AboutServices from "./AboutServices";
+import AboutTeam from "./AboutTeam";
 import AboutUs from "./AboutUs";
 
 const About = () => {
@@ -13,7 +14,8 @@ const About = () => {
       <AboutUs />
       <AboutPartner />
       <AboutAward />
-      <AboutServices />
+      <AboutCounter />
+      <AboutTeam />
       <Footer />
     </div>
   );

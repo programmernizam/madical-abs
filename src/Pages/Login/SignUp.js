@@ -1,14 +1,14 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import GoogleLogin from "./GoogleLogin";
-import { useForm } from "react-hook-form";
-import auth from "../../firebase.init";
-import {
-  useCreateUserWithEmailAndPassword,
-  useSendEmailVerification,
-  useUpdateProfile,
-} from "react-firebase-hooks/auth";
-import Loading from "../../components/Loading";
 import { useEffect } from "react";
+import {
+    useCreateUserWithEmailAndPassword,
+    useSendEmailVerification,
+    useUpdateProfile
+} from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Loading from "../../components/Loading";
+import auth from "../../firebase.init";
+import GoogleLogin from "./GoogleLogin";
 
 const SignUp = () => {
   const {
@@ -109,7 +109,7 @@ const SignUp = () => {
             </div>
             <p>
               Already have an account?{" "}
-              <Link to={"/login"} className="text-[#19D3AE]">
+              <Link to={"/login"} className="text-primary">
                 Login
               </Link>
             </p>

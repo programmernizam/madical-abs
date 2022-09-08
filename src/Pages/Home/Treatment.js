@@ -20,7 +20,7 @@ const Treatment = () => {
                 here, content here', making it look like readable English. Many
                 desktop publishing packages and web page
               </p>
-              <button className="btn border-0 rounded-none bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC] text-white">
+              <button className="btn border-0 rounded-none bg-gradient-to-r from-primary to-[#0FCFEC] text-white">
                 Learn More
               </button>
             </div>

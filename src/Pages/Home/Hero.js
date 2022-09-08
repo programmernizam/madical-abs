@@ -25,7 +25,7 @@ const Hero = () => {
                 <button className="btn border-0 bg-gradient-to-r from-[#8D5CF6] to-[#5cacf6] text-white rounded-none">
                   Get Quote Now
                 </button>
-                <button className="btn border-0 ml-5 bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC] text-white rounded-none">
+                <button className="btn border-0 ml-5 bg-gradient-to-r from-primary to-[#0FCFEC] text-white rounded-none">
                   Get Started
                 </button>
               </div>

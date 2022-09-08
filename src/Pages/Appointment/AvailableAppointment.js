@@ -12,7 +12,7 @@ const AvailableAppointment = ({ date }) => {
   const {
     data: services,
     isLoading,
-    refetch
+    refetch,
   } = useQuery(["available", formattedDate], () =>
     fetch(`http://localhost:4200/available?date=${formattedDate}`).then((res) =>
       res.json()
@@ -30,7 +30,7 @@ const AvailableAppointment = ({ date }) => {
   // }, []);
   return (
     <section className="container mx-auto text-center py-20">
-      <h2 className="text-2xl text-[#19D3AE]">
+      <h2 className="text-2xl text-primary">
         Available Services on {format(date, "PP")}
       </h2>
       <div className="grid grid-cols-1 p-5 lg:grid-cols-3 gap-9">

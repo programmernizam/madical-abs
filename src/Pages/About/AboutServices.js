@@ -4,19 +4,22 @@ import AboutService from "./AboutService";
 const AboutServices = () => {
   const services = [
     {
-      id: 101,
-      name: "Our Mission",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.",
-    },
-    {
       id: 102,
-      name: "Our Planning",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.",
+      img: "https://i.ibb.co/mSmv66W/lightbulb.png",
+      name: "Vision",
+      text: "Laoreet quisque conubia vivamus odio neque lobortis taciti urna facilisi",
     },
     {
       id: 103,
-      name: "Our Vision",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.",
+      img: "https://i.ibb.co/LQ1L4bR/target.png",
+      name: "Mission",
+      text: "Laoreet quisque conubia vivamus odio neque lobortis taciti urna facilisi",
+    },
+    {
+      id: 101,
+      img: "https://i.ibb.co/DgkgR9v/layers.png",
+      name: "Motto",
+      text: "Laoreet quisque conubia vivamus odio neque lobortis taciti urna facilisi",
     },
   ];
   return (

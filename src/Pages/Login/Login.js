@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import GoogleLogin from "./GoogleLogin";
-import { useForm } from "react-hook-form";
 import {
-  useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword,
+    useSendPasswordResetEmail,
+    useSignInWithEmailAndPassword
 } from "react-firebase-hooks/auth";
-import auth from "../../firebase.init";
+import { useForm } from "react-hook-form";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Loading from "../../components/Loading";
+import auth from "../../firebase.init";
+import GoogleLogin from "./GoogleLogin";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -88,7 +88,7 @@ const Login = () => {
             </div>
             <p>
               New to Doctor Portal?{" "}
-              <Link to="/signup" className="text-[#19D3AE]">
+              <Link to="/signup" className="text-primary">
                 Create Account
               </Link>
             </p>
