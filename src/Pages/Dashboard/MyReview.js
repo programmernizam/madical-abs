@@ -9,7 +9,7 @@ const MyReview = () => {
   const [user] = useAuthState(auth);
   useEffect(() => {
     fetch(
-      `https://fast-chamber-66269.herokuapp.com/reviews?email=${user.email}`
+      `https://fast-chamber-66269.herokuapp.com/my-review?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setReviews(data));
