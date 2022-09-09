@@ -1,6 +1,6 @@
 # Medical LABS
 
-LIVE LINK: [CLICK](https://github.com/facebook/create-react-app).
+LIVE LINK: [CLICK](https://medical-abs.web.app/).
 
 ## Technology Use:
 
