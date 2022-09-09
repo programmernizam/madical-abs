@@ -1,24 +1,25 @@
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
-import Appointment from "./Pages/Appointment/Appointment";
-import Reviews from "./Pages/Reviews/Reviews";
-import Contact from "./Pages/Contact/Contact";
-import Login from "./Pages/Login/Login";
-import SignUp from "./Pages/Login/SignUp";
-import NotFound from "./components/NotFound";
-import RequireAuth from "./components/RequireAuth";
+import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import NotFound from "./components/NotFound";
+import RequireAuth from "./components/RequireAuth";
+import ViewProfile from "./components/ViewProfile";
+import About from "./Pages/About/About";
+import Appointment from "./Pages/Appointment/Appointment";
+import Contact from "./Pages/Contact/Contact";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import MyAppointment from "./Pages/Dashboard/MyAppointment";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
+import MyAppointment from "./Pages/Dashboard/MyAppointment";
 import MyReview from "./Pages/Dashboard/MyReview";
 import NewReview from "./Pages/Dashboard/NewReview";
+import Subscribers from "./Pages/Dashboard/Subscribers";
 import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
-import ViewProfile from "./components/ViewProfile";
+import Home from "./Pages/Home/Home";
+import Login from "./Pages/Login/Login";
+import SignUp from "./Pages/Login/SignUp";
+import Reviews from "./Pages/Reviews/Reviews";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="make-admin" element={<MakeAdmin />} />
           <Route path="my-review" element={<MyReview />} />
           <Route path="new-review" element={<NewReview />} />
+          <Route path="subscriber" element={<Subscribers />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

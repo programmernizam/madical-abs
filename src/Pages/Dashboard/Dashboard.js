@@ -33,6 +33,14 @@ const Dashboard = () => {
             <li className="my-3">
               <NavLink
                 className="rounded btn-accent text-white"
+                to={"subscriber"}
+              >
+                Subscribers
+              </NavLink>
+            </li>
+            <li className="my-3">
+              <NavLink
+                className="rounded btn-accent text-white"
                 to={"make-admin"}
               >
                 Make Admin

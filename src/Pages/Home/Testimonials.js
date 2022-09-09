@@ -51,7 +51,7 @@ const Testimonials = () => {
           <div>
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial._id} className="py-10 px-2">
-                <div className="p-10 shadow-xl rounded-2xl bg-base-100 min-h-[300px]">
+                <div className="p-10 shadow-sm border hover:shadow-xl hover:duration-700 rounded-2xl bg-base-100 min-h-[300px]">
                   <div className="flex justify-start mb-5 gap-8 items-center">
                     {testimonial?.img ? (
                       <div className="avatar">
