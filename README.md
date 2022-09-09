@@ -1,7 +1,8 @@
 # Medical LABS
 
-LIVE LINK: [Click Here](https://medical-abs.web.app/)
-Server Side Code: [Click Here](https://github.com/programmernizam/madical-abs-server)
+### LIVE LINK: [Click Here](https://medical-abs.web.app/)
+
+### Server Side Code: [Click Here](https://github.com/programmernizam/madical-abs-server)
 
 ## Technology Use:
 
