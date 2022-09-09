@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import ReadMore from "../../components/ReadMore";
+import auth from "../../firebase.init";
 
 const MyReview = () => {
   const [reviews, setReviews] = useState([]);
+  const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch("https://fast-chamber-66269.herokuapp.com/reviews")
+    fetch(
+      `https://fast-chamber-66269.herokuapp.com/reviews?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setReviews(data));
-  }, []);
+  }, [user]);
   const handleDelete = (id) => {
     fetch(`https://fast-chamber-66269.herokuapp.com/reviews/${id}`, {
       method: "DELETE",

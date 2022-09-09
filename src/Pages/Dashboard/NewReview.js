@@ -15,6 +15,7 @@ const NewReview = () => {
   const onSubmit = (data) => {
     const review = {
       name: user?.displayName,
+      email: user?.email,
       city: data.city,
       img: user?.photoURL,
       text: data.text,
@@ -51,7 +52,7 @@ const NewReview = () => {
                 {errors.city?.type === "required" && "City is required"}
               </p>
             </div>
-            
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Your Feedback</span>
