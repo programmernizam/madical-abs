@@ -13,29 +13,31 @@ const MyAppointment = () => {
   return (
     <div>
       <div class="overflow-x-auto">
-        <table class="table table-zebra w-full border-2">
+        <table class="table w-full">
           {/* <!-- head --> */}
           <thead>
-            <tr className="text-center">
-              <th>No</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Treatment</th>
-              <th>Phone</th>
+            <tr className="text-center border-b">
+              <th className="border-r bg-primary text-white">No</th>
+              <th className="border-r bg-accent text-white">Name</th>
+              <th className="border-r bg-error text-white">Email</th>
+              <th className="border-r bg-info text-white">Date</th>
+              <th className="border-r bg-success text-white">Time</th>
+              <th className="border-r bg-warning text-white">Treatment</th>
+              <th className="border-r bg-neutral text-white">Phone</th>
             </tr>
           </thead>
           <tbody>
             {appointment.map((appoint, index) => (
               <tr className="text-center">
-                <td>{index + 1}</td>
-                <td>{appoint.patientName}</td>
-                <td>{appoint.patient}</td>
-                <td>{appoint.date}</td>
-                <td>{appoint.slot}</td>
-                <td>{appoint.treatment}</td>
-                <td>{appoint.phone}</td>
+                <td className="border-r bg-primary text-white">{index + 1}</td>
+                <td className="border-r bg-accent text-white">
+                  {appoint.patientName}
+                </td>
+                <td className="border-r bg-error text-white">{appoint.patient}</td>
+                <td className="border-r bg-info text-white">{appoint.date}</td>
+                <td className="border-r bg-success text-white">{appoint.slot}</td>
+                <td className="border-r bg-warning text-white">{appoint.treatment}</td>
+                <td className="border-r bg-neutral text-white">{appoint.phone}</td>
               </tr>
             ))}
           </tbody>

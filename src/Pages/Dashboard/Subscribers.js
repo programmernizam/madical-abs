@@ -13,16 +13,16 @@ const Subscribers = () => {
         <table class="table w-full">
           {/* <!-- head --> */}
           <thead>
-            <tr className="text-center">
-              <th>No</th>
-              <th>Subscribers</th>
+            <tr className="text-center border-b">
+              <th className="bg-primary text-white border-r">No</th>
+              <th className="bg-accent text-white">Subscribers</th>
             </tr>
           </thead>
           <tbody>
             {subscribers.map((subscriber, index) => (
               <tr className="text-center">
-                <td>{index + 1}</td>
-                <td>{subscriber.email}</td>
+                <td className="text-white bg-primary border-r">{index + 1}</td>
+                <td className="bg-accent text-white">{subscriber.email}</td>
               </tr>
             ))}
           </tbody>

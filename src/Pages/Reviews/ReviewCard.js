@@ -4,7 +4,7 @@ import ReadMore from "../../components/ReadMore";
 const ReviewCard = ({ review }) => {
   const { name, city, img, text } = review;
   return (
-    <div className="hover:shadow-xl hover:duration-700 bg-base-100 h-[350px]">
+    <div className="hover:shadow-2xl rounded-r-2xl hover:duration-700 bg-base-100 h-[350px]">
       <div className="flex flex-col lg:flex-row gap-5 justify-center items-center min-h-[83%]">
         <div className="flex-1">
           {img ? (

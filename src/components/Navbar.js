@@ -19,7 +19,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/"}
-          className="rounded bg-base-100 px-6 hover:text-white justify-center hover:bg-accent"
+          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
         >
           Home
         </NavLink>
@@ -27,7 +27,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/about"}
-          className="rounded bg-base-100 px-6 hover:text-white justify-center hover:bg-accent"
+          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
         >
           About
         </NavLink>
@@ -35,7 +35,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/appointment"}
-          className="rounded bg-base-100 px-6 hover:text-white justify-center hover:bg-accent"
+          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
         >
           Appointment
         </NavLink>
@@ -43,7 +43,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/reviews"}
-          className="rounded bg-base-100 px-6 hover:text-white justify-center hover:bg-accent"
+          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
         >
           Reviews
         </NavLink>
@@ -51,7 +51,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/contact"}
-          className="rounded bg-base-100 px-6 hover:text-white justify-center hover:bg-accent"
+          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
         >
           Contact Us
         </NavLink>
@@ -72,7 +72,7 @@ const Navbar = ({ children }) => {
             ) : (
               <div class="avatar online">
                 <div class="w-10 rounded-full">
-                  <img src={user?.photoURL} alt="" className="cursor-pointer"/>
+                  <img src={user?.photoURL} alt="" className="cursor-pointer" />
                 </div>
               </div>
             )}
