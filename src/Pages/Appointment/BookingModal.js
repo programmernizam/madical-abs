@@ -21,7 +21,7 @@ const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
       patient: user.email,
       phone: event.target.phone.value,
     };
-    fetch("http://localhost:4200/booking", {
+    fetch("https://fast-chamber-66269.herokuapp.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",

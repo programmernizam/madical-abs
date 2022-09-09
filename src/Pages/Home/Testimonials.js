@@ -12,7 +12,7 @@ import ReadMore from "../../components/ReadMore";
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4200/reviews")
+    fetch("https://fast-chamber-66269.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setTestimonials(data));
   }, []);

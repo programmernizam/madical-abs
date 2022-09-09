@@ -5,12 +5,12 @@ import ReadMore from "../../components/ReadMore";
 const MyReview = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4200/reviews")
+    fetch("https://fast-chamber-66269.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
   const handleDelete = (id) => {
-    fetch(`http://localhost:4200/reviews/${id}`, {
+    fetch(`https://fast-chamber-66269.herokuapp.com/reviews/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

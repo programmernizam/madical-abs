@@ -19,7 +19,7 @@ const NewReview = () => {
       img: user?.photoURL,
       text: data.text,
     };
-    fetch("http://localhost:4200/reviews", {
+    fetch("https://fast-chamber-66269.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

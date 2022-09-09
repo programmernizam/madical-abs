@@ -6,7 +6,7 @@ const MyAppointment = () => {
   const [appointment, setAppointment] = useState([]);
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(`http://localhost:4200/booking?patient=${user.email}`)
+    fetch(`https://fast-chamber-66269.herokuapp.com/booking?patient=${user.email}`)
       .then((res) => res.json())
       .then((data) => setAppointment(data));
   }, [user]);

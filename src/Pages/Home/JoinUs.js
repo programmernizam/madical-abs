@@ -13,7 +13,7 @@ const JoinUs = () => {
     const email = {
       email: data.email,
     };
-    fetch("http://localhost:4200/subscriber", {
+    fetch("https://fast-chamber-66269.herokuapp.com/subscriber", {
       method: "POST",
       headers: {
         "content-type": "application/json",
