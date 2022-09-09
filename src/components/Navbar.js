@@ -169,8 +169,8 @@ const Navbar = ({ children }) => {
                 </svg>
               </label>
               <ul
-                tabindex="0"
-                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                tabIndex="0"
+                class="menu menu-compact dropdown-content gap-1 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {navItem}
               </ul>
