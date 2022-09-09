@@ -1,6 +1,11 @@
 import React from "react";
+import {
+  BsFillBookmarkCheckFill,
+  BsFillCalendar2CheckFill
+} from "react-icons/bs";
+import { FaUserCog, FaUserEdit } from "react-icons/fa";
+import { MdRateReview, MdReviews } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
-
 const Dashboard = () => {
   return (
     <section className="container mx-auto mt-5">
@@ -19,6 +24,7 @@ const Dashboard = () => {
                 className="rounded btn-accent text-white"
                 to={"update-profile"}
               >
+                <FaUserEdit className="text-2xl" />
                 Update Profile
               </NavLink>
             </li>
@@ -27,6 +33,7 @@ const Dashboard = () => {
                 className="rounded btn-accent text-white"
                 to={"my-appointment"}
               >
+                <BsFillCalendar2CheckFill className="text-xl" />
                 My Appointment
               </NavLink>
             </li>
@@ -35,6 +42,7 @@ const Dashboard = () => {
                 className="rounded btn-accent text-white"
                 to={"subscriber"}
               >
+                <BsFillBookmarkCheckFill className="text-xl" />
                 Subscribers
               </NavLink>
             </li>
@@ -43,7 +51,8 @@ const Dashboard = () => {
                 className="rounded btn-accent text-white"
                 to={"make-admin"}
               >
-                Make Admin
+                <FaUserCog className="text-xl" />
+                User Role
               </NavLink>
             </li>
             <li className="my-3">
@@ -51,6 +60,7 @@ const Dashboard = () => {
                 className="rounded btn-accent text-white"
                 to={"my-review"}
               >
+                <MdReviews className="text-xl" />
                 My Review
               </NavLink>
             </li>
@@ -59,6 +69,7 @@ const Dashboard = () => {
                 className="rounded btn-accent text-white"
                 to={"new-review"}
               >
+                <MdRateReview className="text-xl" />
                 New Review
               </NavLink>
             </li>

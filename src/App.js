@@ -50,6 +50,7 @@ function App() {
             </RequireAuth>
           }
         >
+          <Route index element={<MyAppointment />} />
           <Route path="my-appointment" element={<MyAppointment />} />
           <Route path="update-profile" element={<UpdateProfile />} />
           <Route path="make-admin" element={<MakeAdmin />} />

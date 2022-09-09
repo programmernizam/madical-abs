@@ -1,7 +1,6 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import ReadMore from "../../components/ReadMore";
 
 const MyReview = () => {
   const [reviews, setReviews] = useState([]);
@@ -41,8 +40,24 @@ const MyReview = () => {
                 <td>{index + 1}</td>
                 <td>{review.name}</td>
                 <td>{review.city}</td>
-                <td>{review.text?.slice(0, 40)}</td>
-                <td>{review.img?.slice(0, 40)}</td>
+                <td>
+                  <ReadMore limit={60}>{review?.text}</ReadMore>
+                </td>
+                <td>
+                  {review?.img ? (
+                    <img
+                      className="w-10 h-10 object-cover rounded-full"
+                      src={review.img}
+                      alt=""
+                    />
+                  ) : (
+                    <img
+                      className="w-10 h-10 object-cover rounded-full"
+                      src="https://i.ibb.co/pJjLHNT/img-avatar.pngws"
+                      alt=""
+                    />
+                  )}
+                </td>
                 <td>
                   <button
                     onClick={() => handleDelete(review._id)}
