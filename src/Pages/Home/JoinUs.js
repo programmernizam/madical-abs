@@ -42,11 +42,11 @@ const JoinUs = () => {
             <input
               {...register("email", { required: true })}
               placeholder="email address"
-              className="input rounded-none rounded-l-md bg-gray-100 input-bordered w-60 lg:w-96"
+              className="input rounded lg:rounded-l-md bg-gray-100 input-bordered w-60 lg:w-96"
             />
             <input
               type="submit"
-              className="btn bg-[#8D5CF6] border-none rounded-none rounded-r-md px-10"
+              className="btn bg-[#8D5CF6] border-none rounded mt-3 lg:mt-0 lg:rounded-r-md px-10"
               value="Subscribe"
             />
             <p className="text-error">

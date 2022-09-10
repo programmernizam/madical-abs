@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <section className="bg-gradient-to-r from-[#8D5CF6] to-[#5cacf6]">
       <div className="container mx-auto">
-        <footer className="footer p-10 text-white">
+        <footer className="footer p-10 text-white grid-cols-2">
           <div>
             <span className="footer-title">Services</span>
             <a className="link link-hover">Branding</a>

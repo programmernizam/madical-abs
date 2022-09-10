@@ -6,13 +6,15 @@ const MyAppointment = () => {
   const [appointment, setAppointment] = useState([]);
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(`https://fast-chamber-66269.herokuapp.com/booking?patient=${user.email}`)
+    fetch(
+      `https://fast-chamber-66269.herokuapp.com/booking?patient=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setAppointment(data));
   }, [user]);
   return (
     <div>
-      <div class="overflow-x-auto">
+      <div class="lg:overflow-x-auto overflow-x-scroll">
         <table class="table w-full">
           {/* <!-- head --> */}
           <thead>
@@ -33,11 +35,19 @@ const MyAppointment = () => {
                 <td className="border-r bg-accent text-white">
                   {appoint.patientName}
                 </td>
-                <td className="border-r bg-error text-white">{appoint.patient}</td>
+                <td className="border-r bg-error text-white">
+                  {appoint.patient}
+                </td>
                 <td className="border-r bg-info text-white">{appoint.date}</td>
-                <td className="border-r bg-success text-white">{appoint.slot}</td>
-                <td className="border-r bg-warning text-white">{appoint.treatment}</td>
-                <td className="border-r bg-neutral text-white">{appoint.phone}</td>
+                <td className="border-r bg-success text-white">
+                  {appoint.slot}
+                </td>
+                <td className="border-r bg-warning text-white">
+                  {appoint.treatment}
+                </td>
+                <td className="border-r bg-neutral text-white">
+                  {appoint.phone}
+                </td>
               </tr>
             ))}
           </tbody>

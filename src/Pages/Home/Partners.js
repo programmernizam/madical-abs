@@ -12,17 +12,29 @@ import partner3 from "../../assets/partners/fa-brands-3.png";
 import partner4 from "../../assets/partners/fa-brands-4.png";
 import partner5 from "../../assets/partners/fa-brands-5.png";
 
+import { Autoplay } from "swiper";
+
 const Partners = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto">
         <>
           <Swiper
-            slidesPerView={5}
-            spaceBetween={10}
+            slidesPerView={3}
             slidesPerGroup={1}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              1024: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+              },
+            }}
             loop={true}
             loopFillGroupWithBlank={true}
+            modules={[Autoplay]}
             className="mySwiper grid"
           >
             <SwiperSlide className="grid justify-items-center content-center">

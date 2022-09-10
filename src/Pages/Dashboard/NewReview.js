@@ -34,7 +34,7 @@ const NewReview = () => {
       });
   };
   return (
-    <section className="h-screen grid grid-cols-1 justify-items-center content-center">
+    <section>
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <div className="card-body">
           <form onSubmit={handleSubmit(onSubmit)}>
