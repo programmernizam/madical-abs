@@ -79,12 +79,12 @@ const Navbar = ({ children }) => {
           </label>
           <ul
             tabIndex="0"
-            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 gap-1"
           >
             <li>
               <NavLink
                 to={"/view-profile"}
-                className="rounded bg-base-100 px-6 hover:text-white justify-center hover:bg-accent"
+                className="hover:duration-700 px-2 hover:text-white justify-center hover:bg-primary"
               >
                 View Profile
               </NavLink>
@@ -92,7 +92,7 @@ const Navbar = ({ children }) => {
             <li>
               <NavLink
                 to={"/dashboard"}
-                className="rounded bg-base-100 px-6 hover:text-white justify-center hover:bg-accent"
+                className="hover:duration-700 px-2 hover:text-white justify-center hover:bg-primary"
               >
                 Dashboard
               </NavLink>

@@ -1,11 +1,8 @@
 import React from "react";
+import UnderConstruction from "../../components/UnderConstruction";
 
 const MakeAdmin = () => {
-  return (
-    <div>
-      <h2>This is make admin</h2>
-    </div>
-  );
+  return <UnderConstruction />;
 };
 
 export default MakeAdmin;

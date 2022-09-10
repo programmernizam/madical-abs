@@ -1,12 +1,12 @@
 import React from "react";
-import ContactForm from "./ContactForm";
-import ContactHero from "./ContactHero";
+import UnderConstruction from "../../components/UnderConstruction";
 
 const Contact = () => {
   return (
     <div>
-      <ContactHero />
-      <ContactForm />
+      <UnderConstruction />
+      {/* <ContactHero />
+      <ContactForm /> */}
     </div>
   );
 };

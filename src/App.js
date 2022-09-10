@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import NotFound from "./components/NotFound";
 import RequireAuth from "./components/RequireAuth";
+import UnderConstruction from "./components/UnderConstruction";
 import ViewProfile from "./components/ViewProfile";
 import About from "./Pages/About/About";
 import Appointment from "./Pages/Appointment/Appointment";
@@ -58,6 +59,7 @@ function App() {
           <Route path="new-review" element={<NewReview />} />
           <Route path="subscriber" element={<Subscribers />} />
         </Route>
+        <Route path="construction" element={<UnderConstruction />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
