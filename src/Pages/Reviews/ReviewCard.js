@@ -1,6 +1,5 @@
 import React from "react";
 import ReadMore from "../../components/ReadMore";
-
 const ReviewCard = ({ review }) => {
   const { name, city, img, text } = review;
   return (

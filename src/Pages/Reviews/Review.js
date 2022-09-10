@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from "react";
+import Loading from "../../components/Loading";
 import ReviewCard from "./ReviewCard";
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
+
   useEffect(() => {
     fetch("https://fast-chamber-66269.herokuapp.com/reviews")
       .then((res) => res.json())
-      .then((data) => setReviews(data));
+      .then((data) => {
+        if (!data) {
+          return <Loading />;
+        }
+        setReviews(data);
+      });
   }, []);
   return (
     <section className="container mx-auto my-20 p-5 lg:p-0">
