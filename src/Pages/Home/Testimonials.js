@@ -17,14 +17,18 @@ const Testimonials = () => {
       .then((data) => setTestimonials(data));
   }, []);
   return (
-    <section className="container mx-auto my-20 p-5 lg:p-0">
+    <section className="container mx-auto lg:my-20 p-5 lg:p-0">
       <div className="flex justify-between">
         <div>
-          <h3 className="text-xl text-primary font-bold">Testimonial</h3>
-          <h2 className="text-4xl font-semibold">What Our Patients Says</h2>
+          <h3 className="text-sm lg:text-xl text-primary font-bold">
+            Testimonial
+          </h3>
+          <h2 className="text-xl font-semibold lg:text-4xl">
+            What Our Patients Says
+          </h2>
         </div>
         <div className="">
-          <img src={quote} alt="" className="w-40" />
+          <img src={quote} alt="" className="w-20 lg:w-40" />
         </div>
       </div>
       <div className="mt-10">
@@ -50,24 +54,24 @@ const Testimonials = () => {
         >
           <div>
             {testimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial._id} className="py-10 px-2">
-                <div className="p-10 shadow-sm border hover:shadow-xl hover:duration-700 rounded-2xl bg-base-100 min-h-[300px]">
+              <SwiperSlide key={testimonial._id} className="py-10 px-1 lg:px-2">
+                <div className="p-5 lg:p-10 shadow-sm border hover:shadow-xl hover:duration-700 rounded-2xl bg-base-100 lg:min-h-[300px]">
                   <div className="flex justify-start mb-5 gap-8 items-center">
                     {testimonial?.img ? (
                       <div className="avatar">
-                        <div className="w-20 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
+                        <div className="w-10 lg:w-20 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
                           <img src={testimonial.img} alt="" />
                         </div>
                       </div>
                     ) : (
                       <div class="avatar placeholder">
-                        <div class="bg-neutral-focus ring ring-accent ring-offset-base-100 ring-offset-2 text-neutral-content rounded-full w-20">
+                        <div class="bg-neutral-focus ring ring-accent ring-offset-base-100 ring-offset-2 text-neutral-content rounded-full w-10 lg:w-20">
                           <span class="text-xl">A</span>
                         </div>
                       </div>
                     )}
                     <div>
-                      <h3 className="text-xl font-semibold">
+                      <h3 className="text-md lg:text-xl font-semibold">
                         {testimonial.name}
                       </h3>
                       <h5>{testimonial.city}</h5>

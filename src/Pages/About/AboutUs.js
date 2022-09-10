@@ -9,7 +9,7 @@ const AboutUs = () => {
             <img src={treatment} className="lg:max-w-xl rounded-xl" alt="" />
             <div>
               <h4 className="text-primary">WHO WE ARE</h4>
-              <h2 className="lg:text-5xl text-5xl font-bold">
+              <h2 className="lg:text-5xl text-3xl font-bold">
                 We passionately care form your smile.
               </h2>
               <p className="mt-5">

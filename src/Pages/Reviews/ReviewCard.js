@@ -6,12 +6,12 @@ const ReviewCard = ({ review }) => {
   return (
     <div className="hover:shadow-2xl lg:rounded-r-2xl hover:duration-700 bg-base-100 lg:h-[350px]">
       <div className="flex flex-col lg:flex-row gap-5 justify-center items-center lg:min-h-[80%]">
-        <div className="flex-1">
+        <div className="flex-1 w-[100%]">
           {img ? (
             <img
               src={img}
               alt=""
-              className="w-full lg:h-[291px] object-cover"
+              className="w-full lg:h-[291px] h-80 object-cover"
             />
           ) : (
             <img

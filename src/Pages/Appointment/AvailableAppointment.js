@@ -14,9 +14,9 @@ const AvailableAppointment = ({ date }) => {
     isLoading,
     refetch,
   } = useQuery(["available", formattedDate], () =>
-    fetch(`https://fast-chamber-66269.herokuapp.com/available?date=${formattedDate}`).then((res) =>
-      res.json()
-    )
+    fetch(
+      `https://fast-chamber-66269.herokuapp.com/available?date=${formattedDate}`
+    ).then((res) => res.json())
   );
 
   if (isLoading) {
@@ -30,7 +30,7 @@ const AvailableAppointment = ({ date }) => {
   // }, []);
   return (
     <section className="container mx-auto text-center py-20">
-      <h2 className="text-2xl text-primary">
+      <h2 className="text-xl lg:text-2xl text-primary">
         Available Services on {format(date, "PP")}
       </h2>
       <div className="grid grid-cols-1 p-5 lg:grid-cols-3 gap-9">

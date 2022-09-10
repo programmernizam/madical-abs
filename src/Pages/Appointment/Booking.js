@@ -3,7 +3,7 @@ import React from "react";
 const Booking = ({ service, setTreatment }) => {
   const { name, slots } = service;
   return (
-    <div className="card bg-base-100 shadow-sm border hover:shadow-xl duration-700 p-5">
+    <div className="card bg-base-100 shadow-sm border hover:shadow-xl duration-700 lg:p-5">
       <div className="card-body">
         <h2 className="text-2xl text-primary">{name}</h2>
         <p>

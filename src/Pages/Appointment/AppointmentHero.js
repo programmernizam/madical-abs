@@ -13,7 +13,7 @@ const AppointmentHero = ({ date, setDate }) => {
               mode="single"
               selected={date}
               onSelect={setDate}
-              className="p-8 w-full"
+              className="p-2 lg:p-8 w-full"
             />
           </div>
         </div>
