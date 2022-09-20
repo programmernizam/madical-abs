@@ -19,7 +19,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/"}
-          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
+          className="mx-1 hover:duration-700 hover:text-white justify-center hover:bg-primary"
         >
           Home
         </NavLink>
@@ -27,7 +27,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/about"}
-          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
+          className="mx-1 hover:duration-700 hover:text-white justify-center hover:bg-primary"
         >
           About
         </NavLink>
@@ -35,7 +35,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/appointment"}
-          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
+          className="mx-1 hover:duration-700 hover:text-white justify-center hover:bg-primary"
         >
           Appointment
         </NavLink>
@@ -43,7 +43,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/reviews"}
-          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
+          className="mx-1 hover:duration-700 hover:text-white justify-center hover:bg-primary"
         >
           Reviews
         </NavLink>
@@ -51,7 +51,7 @@ const Navbar = ({ children }) => {
       <li>
         <NavLink
           to={"/contact"}
-          className="mx-1 px-7 hover:duration-700 py-2 hover:text-white justify-center hover:bg-primary"
+          className="mx-1 hover:duration-700 hover:text-white justify-center hover:bg-primary"
         >
           Contact Us
         </NavLink>
