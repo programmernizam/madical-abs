@@ -11,7 +11,7 @@ const ContactHero = () => {
       }}
     >
       <div className="grid grid-cols-1 w-full justify-items-center h-full content-center absolute bg-[#0000006b]">
-        <h2 className="text-5xl font-bold text-white">Contact Us</h2>
+        <h2 className="text-5xl font-bold text-white">Contact</h2>
         <h4 className="text-2xl font-semibold text-white text-center">
           Get in touch and let us know how we can help.
         </h4>
