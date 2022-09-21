@@ -53,7 +53,7 @@ const Navbar = ({ children }) => {
           to={"/contact"}
           className="mx-1 hover:duration-700 hover:text-white justify-center hover:bg-primary"
         >
-          Contact Us
+          Contact
         </NavLink>
       </li>
     </>
