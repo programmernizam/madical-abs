@@ -21,7 +21,7 @@ const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
       patient: user.email,
       phone: event.target.phone.value,
     };
-    fetch("https://fast-chamber-66269.herokuapp.com/booking", {
+    fetch("https://medical-abs-server.onrender.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",

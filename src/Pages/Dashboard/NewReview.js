@@ -20,7 +20,7 @@ const NewReview = () => {
       img: user?.photoURL,
       text: data.text,
     };
-    fetch("https://fast-chamber-66269.herokuapp.com/reviews", {
+    fetch("https://medical-abs-server.onrender.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -13,7 +13,7 @@ const JoinUs = () => {
     const email = {
       email: data.email,
     };
-    fetch("https://fast-chamber-66269.herokuapp.com/subscriber", {
+    fetch("https://medical-abs-server.onrender.com/subscriber", {
       method: "POST",
       headers: {
         "content-type": "application/json",

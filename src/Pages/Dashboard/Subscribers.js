@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const Subscribers = () => {
   const [subscribers, setSubscribers] = useState([]);
   useEffect(() => {
-    fetch("https://fast-chamber-66269.herokuapp.com/subscriber")
+    fetch("https://medical-abs-server.onrender.com/subscriber")
       .then((res) => res.json())
       .then((data) => setSubscribers(data));
   }, []);

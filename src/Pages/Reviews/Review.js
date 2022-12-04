@@ -6,7 +6,7 @@ const Review = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://fast-chamber-66269.herokuapp.com/reviews")
+    fetch("https://medical-abs-server.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => {
         if (!data) {

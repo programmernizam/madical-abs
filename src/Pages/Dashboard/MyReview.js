@@ -9,13 +9,13 @@ const MyReview = () => {
   const [user] = useAuthState(auth);
   useEffect(() => {
     fetch(
-      `https://fast-chamber-66269.herokuapp.com/my-review?email=${user.email}`
+      `https://medical-abs-server.onrender.com/my-review?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [user]);
   const handleDelete = (id) => {
-    fetch(`https://fast-chamber-66269.herokuapp.com/reviews/${id}`, {
+    fetch(`https://medical-abs-server.onrender.com/reviews/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

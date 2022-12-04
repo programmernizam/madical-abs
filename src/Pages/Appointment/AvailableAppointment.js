@@ -15,7 +15,7 @@ const AvailableAppointment = ({ date }) => {
     refetch,
   } = useQuery(["available", formattedDate], () =>
     fetch(
-      `https://fast-chamber-66269.herokuapp.com/available?date=${formattedDate}`
+      `https://medical-abs-server.onrender.com/available?date=${formattedDate}`
     ).then((res) => res.json())
   );
 
@@ -24,7 +24,7 @@ const AvailableAppointment = ({ date }) => {
   }
 
   // useEffect(() => {
-  //   fetch("https://fast-chamber-66269.herokuapp.com/services")
+  //   fetch("https://medical-abs-server.onrender.com/services")
   //     .then((res) => res.json())
   //     .then((data) => setServices(data));
   // }, []);

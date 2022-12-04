@@ -7,7 +7,7 @@ const MyAppointment = () => {
   const [user] = useAuthState(auth);
   useEffect(() => {
     fetch(
-      `https://fast-chamber-66269.herokuapp.com/booking?patient=${user.email}`
+      `https://medical-abs-server.onrender.com/booking?patient=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setAppointment(data));
